@@ -1,11 +1,18 @@
 {
   "providers": ["php"],
   "variables": {
-    "NIXPACKS_PHP_VERSION": "8.4"
+    "NIXPACKS_PHP_VERSION": "8.3"
   },
   "phases": {
     "setup": {
-      "nixPkgs": ["php84", "php84Packages.composer"]
+      "nixPkgs": [
+        "php83",
+        "php83Packages.composer",
+        "php83Extensions.pdo",
+        "php83Extensions.pdo_mysql",
+        "php83Extensions.mbstring",
+        "php83Extensions.openssl"
+      ]
     }
   }
 }
